@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Kuhl - Education</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Education</h1>
+    </header>
+    <div class="container">
+
+      <!-- Horizontal navigation bar -->
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="workexperience.html">Work</a></li>
+        <li><a href="developerprojects.html">Projects</a></li>
+      </ul>
+
+      <div class="section" id="section1">
+        <h3 onclick="toggleSection('section1')">Chippewa Valley Technical College</h3>
+        <p>Associate Degree in Computer Science - IT Software Developer (Expected May 2025)</p>
+        <p>Relevant Coursework: Data Analysis, Software Engineering, Operating Systems, Algorithms</p>
+      </div>
+
+      <div class="section" id="section2">
+        <h3 onclick="toggleSection('section2')">Coursera</h3>
+        <p>Professional Certificate in Meta iOS Software Developer (July 2023)</p>
+        <p>Relevant Coursework: Creating the User Interface, Front-End Development, Mobile App Development, JavaScript, SwiftUI, React, React Native, Version Control</p>
+      </div>
+
+      <div class="section" id="section3">
+        <h3 onclick="toggleSection('section3')">Wartburg College</h3>
+        <p>Bachelor Degree in Mathematics and Physics (May 2003)</p>
+      </div>
+
+    </div>
+
+    <script>
+      function toggleSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        section.classList.toggle("collapsed");
+      }
+    </script>
+</body>
+</html>
