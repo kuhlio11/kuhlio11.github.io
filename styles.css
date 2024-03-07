@@ -20,12 +20,10 @@ header {
   padding: 2rem;
 }
 
-h2 {
-  margin-top: 1.5rem;
-}
-
-h3 {
-  margin-top: 1rem;
+h2, h3 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
 }
 
 /* Style for the horizontal bar */
@@ -57,8 +55,12 @@ h3 {
   padding-bottom: 7px; /* Adjust padding to increase button height */
 }
 
+.navbar li a.active {
+  background-color: #ec8941; /* Change to desired active color */
+}
+
 .navbar li a:hover {
-  background-color: #ec8941;
+  background-color: #ec884194;
 }
 
 .profile-info {
@@ -82,20 +84,75 @@ h3 {
 }
 
 .section {
-  border: 2px solid #ccc; /* Add border to section */
-  margin-top: 30px; 
-  padding: 10px; /* Add padding for better spacing */
+  border: 2px solid #ccc; /* Add border around each section */
+  margin-top: 0; 
+  padding-left: 20px;
+  padding-right: 20px;
 }
+.section-header {
+  color: #fff;
+  background-color: #333;
+  margin-top: 30px;
+  margin-bottom: -20px;
+  position: relative;
+}
+
+.video-section {
+  border: 2px solid #ccc; /* Add border around each section */
+  margin-top: 10px; 
+  margin-bottom: 10px; 
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+}
+.text-content {
+  flex: 1;
+  padding-right: 20px; /* Adjust spacing between text and video */
+}
+.video-content {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.video-content iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width) */
+  height: 0;
+}
+
+ul.multi-column-list {
+  columns: 3; /* Set the number of columns */
+}
+
+ul.multi-column-list li {
+  margin-right: 15px; /* Add some space between list items */
+  margin-top: 0
+}
+
+
+
+
+
 
 /* Media query for smartphones */
 @media only screen and (max-width: 458px) {
   header {
+    text-align: center;
     padding: 1.5rem;
   }
-  
+
   .container {
     padding: 1rem;
-}
+  }
   .navbar {
       display: grid; /* Use grid layout */
       grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
@@ -111,6 +168,8 @@ h3 {
   .profile-image {
     width: 150px; /* Adjust the width as needed */
     height: 150px; /* Adjust the height as needed */
+    margin: 0 auto; /* Center the image horizontally */
+
   }
 
   .profile-info {
@@ -119,12 +178,46 @@ h3 {
     align-items: center; /* Align items horizontally */
     text-align: center; /* Center text */
   }
+  .section-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
 
-  .section {
-    margin-top: 20px; 
+  .video-section {
+    display: block; /* Change to block display for stacking vertically */
     border-radius: 5px;
+    padding: 1em;
+    padding-top: 0;
+    margin-top: 20px;
+  }
+
+  .text-content {
+    padding-right: 0; /* Remove padding between text and video */
+    margin-bottom: 20px; /* Add margin between text and video */
+  }
+  .video-content {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width) */
+    height: 0;
+  }
+  .video-content iframe {
+    position: absolute;
+    border-radius: 5px;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  ul.multi-column-list {
+    columns: 2; /* Set the number of columns */
   }
 }
+
+
+
+
+
 
 /* Media query for tablets */
 @media only screen and (min-width: 459px) and (max-width: 1024px) {
@@ -135,7 +228,15 @@ h3 {
       flex-direction: row; /* Display items horizontally */
       justify-content: space-between; /* Space items evenly */
   }
+  ul.multi-column-list {
+    columns: 2; /* Set the number of columns */
+  }
 }
+
+
+
+
+
 
 /* Media query for wide displays */
 @media only screen and (min-width: 1025px) {
@@ -151,5 +252,20 @@ h3 {
   }
   .navbar li {
       width: 100%; /* Make each item take up entire width */
+  }
+  .video-section {
+    margin-top: 30px; /* Add margin on top */
+    align-items: flex-start; /* Align items at the start of the cross axis */
+  }
+  .text-content {
+    flex: 1; /* Take up remaining space */
+    padding-right: 20px; /* Adjust spacing between text and video */
+  }
+  .video-content {
+    max-width: 550px; /* Set maximum width for the video */
+    margin: 0 auto; /* Center the video horizontally */
+  }
+  ul.multi-column-list {
+    columns: 3; /* Set the number of columns */
   }
 }
