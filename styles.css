@@ -1,5 +1,17 @@
 /* styles.css */
 
+.button {
+  color: #fff;
+  text-decoration: none;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #ec884194;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -10,17 +22,18 @@ body {
 header {
   background: #333;
   color: #fff;
-  padding: 2rem;
+  padding: 2em;
   text-align: left;
 }
 
 .container {
   max-width: 800px;
   margin: auto;
-  padding: 2rem;
+  padding: 2em;
 }
 
-h2, h3 {
+h2,
+h3 {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
@@ -38,11 +51,7 @@ h2, h3 {
 
 .navbar li {
   flex: 1; /* Each item occupies equal space */
-  margin-right: 1px; /* Add margin between navbar buttons */
-}
-
-.navbar li:last-child {
-  margin-right: 0; /* Remove margin from the last button */
+  margin: 1px; /* Add margin between navbar buttons */
 }
 
 .navbar li a {
@@ -85,22 +94,20 @@ h2, h3 {
 
 .section {
   border: 2px solid #ccc; /* Add border around each section */
-  margin-top: 0; 
+  margin-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
 }
 .section-header {
   color: #fff;
   background-color: #333;
-  margin-top: 30px;
   margin-bottom: -20px;
   position: relative;
 }
 
 .video-section {
   border: 2px solid #ccc; /* Add border around each section */
-  margin-top: 10px; 
-  margin-bottom: 10px; 
+  margin-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
   display: flex;
@@ -130,12 +137,13 @@ h2, h3 {
 }
 
 ul.multi-column-list {
-  columns: 3; /* Set the number of columns */
+  columns: 4; /* Set the number of columns */
 }
 
 ul.multi-column-list li {
-  margin-right: 15px; /* Add some space between list items */
-  margin-top: 0
+  margin-left: -15px;
+  margin-right: 35px; /* Add some space between list items */
+  margin-top: 0;
 }
 
 
@@ -147,18 +155,20 @@ ul.multi-column-list li {
 @media only screen and (max-width: 458px) {
   header {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.5em;
   }
 
   .container {
-    padding: 1rem;
+    padding: 1em;
   }
   .navbar {
-      display: grid; /* Use grid layout */
-      grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
-      row-gap: 1rem; /* Evenly distributed margin between buttons horizontally */
-      column-gap: 1rem; /* Evenly distributed margin between buttons horizontally */
-      justify-content: space-around; /* Evenly distribute items along the main axis */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+    row-gap: 1rem; /* Evenly distributed margin between buttons horizontally */
+    column-gap: 1rem; /* Evenly distributed margin between buttons horizontally */
+    justify-content: space-around; /* Evenly distribute items along the main axis */
+    margin: 20px;
+    margin-bottom: 0;
   }
 
   .navbar li a {
@@ -169,7 +179,6 @@ ul.multi-column-list li {
     width: 150px; /* Adjust the width as needed */
     height: 150px; /* Adjust the height as needed */
     margin: 0 auto; /* Center the image horizontally */
-
   }
 
   .profile-info {
@@ -178,9 +187,14 @@ ul.multi-column-list li {
     align-items: center; /* Align items horizontally */
     text-align: center; /* Center text */
   }
+  .section {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
   .section-header {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    display: relative;
   }
 
   .video-section {
@@ -188,7 +202,8 @@ ul.multi-column-list li {
     border-radius: 5px;
     padding: 1em;
     padding-top: 0;
-    margin-top: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   .text-content {
@@ -222,14 +237,10 @@ ul.multi-column-list li {
 /* Media query for tablets */
 @media only screen and (min-width: 459px) and (max-width: 1024px) {
   .container {
-      padding: 2rem;
-  }
-  .navbar {
-      flex-direction: row; /* Display items horizontally */
-      justify-content: space-between; /* Space items evenly */
+    padding: 2em;
   }
   ul.multi-column-list {
-    columns: 2; /* Set the number of columns */
+    columns: 3; /* Set the number of columns */
   }
 }
 
@@ -241,17 +252,13 @@ ul.multi-column-list li {
 /* Media query for wide displays */
 @media only screen and (min-width: 1025px) {
   .container {
-      max-width: 1200px; /* Adjust container width for wide displays */
-      padding: 2rem;
-      border-left: 15% solid #ccc; /* Vertical border on the left */
-      border-right: 15% solid #ccc; /* Vertical border on the right */
-  }
-  .navbar {
-      flex-direction: row; /* Display items horizontally */
-
+    max-width: 1200px; /* Adjust container width for wide displays */
+    padding: 2em;
+    border-left: 15% solid #ccc; /* Vertical border on the left */
+    border-right: 15% solid #ccc; /* Vertical border on the right */
   }
   .navbar li {
-      width: 100%; /* Make each item take up entire width */
+    width: 100%; /* Make each item take up entire width */
   }
   .video-section {
     margin-top: 30px; /* Add margin on top */
@@ -264,8 +271,5 @@ ul.multi-column-list li {
   .video-content {
     max-width: 550px; /* Set maximum width for the video */
     margin: 0 auto; /* Center the video horizontally */
-  }
-  ul.multi-column-list {
-    columns: 3; /* Set the number of columns */
   }
 }
