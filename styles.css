@@ -3,7 +3,7 @@
 .button {
   color: #fff;
   text-decoration: none;
-  background-color: #333;
+  background-color: #ec8941;
   padding: 10px;
   border-radius: 5px;
 }
@@ -27,9 +27,9 @@ header {
 }
 
 .container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2em;
+  padding: 5em;
+  padding-top: 30px;
+  background-color: #cccccc45; /* Add background color to the navbar */
 }
 
 h2,
@@ -74,6 +74,8 @@ h3 {
 
 .profile-info {
   display: flex;
+  padding: 20px;
+  padding-left: 0;
   align-items: center; /* Align items vertically */
 }
 
@@ -97,6 +99,7 @@ h3 {
   margin-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
+  background-color: #fff;
 }
 .section-header {
   color: #fff;
@@ -112,6 +115,7 @@ h3 {
   padding-right: 20px;
   display: flex;
   align-items: center;
+  background-color: #fff;
 }
 .text-content {
   flex: 1;
@@ -161,14 +165,16 @@ ul.multi-column-list li {
   .container {
     padding: 1em;
   }
+
   .navbar {
     display: grid; /* Use grid layout */
     grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
     row-gap: 1rem; /* Evenly distributed margin between buttons horizontally */
     column-gap: 1rem; /* Evenly distributed margin between buttons horizontally */
     justify-content: space-around; /* Evenly distribute items along the main axis */
-    margin: 20px;
+    padding: 20px;
     margin-bottom: 0;
+    background-color: #cccccc45; /* Add background color to the navbar */
   }
 
   .navbar li a {
@@ -237,7 +243,8 @@ ul.multi-column-list li {
 /* Media query for tablets */
 @media only screen and (min-width: 459px) and (max-width: 1024px) {
   .container {
-    padding: 2em;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   ul.multi-column-list {
     columns: 3; /* Set the number of columns */
@@ -251,12 +258,6 @@ ul.multi-column-list li {
 
 /* Media query for wide displays */
 @media only screen and (min-width: 1025px) {
-  .container {
-    max-width: 1200px; /* Adjust container width for wide displays */
-    padding: 2em;
-    border-left: 15% solid #ccc; /* Vertical border on the left */
-    border-right: 15% solid #ccc; /* Vertical border on the right */
-  }
   .navbar li {
     width: 100%; /* Make each item take up entire width */
   }
