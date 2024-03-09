@@ -29,29 +29,26 @@ header {
 .container {
   padding: 5em;
   padding-top: 30px;
-  background-color: #cccccc45; /* Add background color to the navbar */
+  background-color: #cccccc45;
 }
 
 h2,
 h3 {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
+  padding: 5px 10px;
 }
 
-/* Style for the horizontal bar */
 .navbar {
   list-style-type: none;
   padding: 0;
+  padding-top: 0;
   margin: 0;
   text-align: center;
-  display: flex; /* Use flexbox */
-  justify-content: space-between; /* Space items evenly */
+  display: flex;
 }
 
 .navbar li {
-  flex: 1; /* Each item occupies equal space */
-  margin: 1px; /* Add margin between navbar buttons */
+  flex: 1;
+  padding-block: 1px;
 }
 
 .navbar li a {
@@ -59,13 +56,11 @@ h3 {
   color: #fff;
   text-decoration: none;
   background-color: #333;
-  width: 100%; /* Make buttons take up entire width */
-  padding-top: 7px; /* Adjust padding to increase button height */
-  padding-bottom: 7px; /* Adjust padding to increase button height */
+  padding: 7px;
 }
 
 .navbar li a.active {
-  background-color: #ec8941; /* Change to desired active color */
+  background-color: #ec8941;
 }
 
 .navbar li a:hover {
@@ -75,32 +70,26 @@ h3 {
 .profile-info {
   display: flex;
   padding: 20px;
-  padding-left: 0;
-  align-items: center; /* Align items vertically */
+  align-items: center;
 }
 
 .profile-image {
-  width: 150px; /* Adjust the width as needed */
-  height: 150px; /* Adjust the height as needed */
-  border-radius: 50%; /* Make the image round */
-  margin-right: 30px; /* Add margin to separate from the contact info */
-}
-
-.contact-info {
-  font-size: 14px; /* Adjust font size as needed */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 30px;
 }
 
 .contact-info p {
-  margin: 5px 0; /* Add margin between paragraphs */
+  margin: 5px 0;
 }
 
 .section {
-  border: 2px solid #ccc; /* Add border around each section */
   margin-bottom: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 5px 20px;
   background-color: #fff;
 }
+
 .section-header {
   color: #fff;
   background-color: #333;
@@ -109,23 +98,24 @@ h3 {
 }
 
 .video-section {
-  border: 2px solid #ccc; /* Add border around each section */
+  display: block;
   margin-bottom: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: flex;
+  padding: 20px;
   align-items: center;
   background-color: #fff;
 }
+
 .text-content {
   flex: 1;
-  padding-right: 20px; /* Adjust spacing between text and video */
+  padding-right: 20px;
 }
+
 .video-content {
   flex: 1;
   position: relative;
   overflow: hidden;
 }
+
 .video-content iframe {
   position: absolute;
   top: 0;
@@ -136,30 +126,18 @@ h3 {
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width) */
-  height: 0;
+  padding-bottom: 56.25%;
 }
 
 ul.multi-column-list {
-  columns: 4; /* Set the number of columns */
+  columns: 4;
 }
-
-ul.multi-column-list li {
-  margin-left: -15px;
-  margin-right: 35px; /* Add some space between list items */
-  margin-top: 0;
-}
-
-
-
-
-
 
 /* Media query for smartphones */
 @media only screen and (max-width: 458px) {
   header {
     text-align: center;
-    padding: 1.5em;
+    padding: 0.5em;
   }
 
   .container {
@@ -167,14 +145,14 @@ ul.multi-column-list li {
   }
 
   .navbar {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
-    row-gap: 1rem; /* Evenly distributed margin between buttons horizontally */
-    column-gap: 1rem; /* Evenly distributed margin between buttons horizontally */
-    justify-content: space-around; /* Evenly distribute items along the main axis */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+    column-gap: 1rem;
+    justify-content: space-around;
     padding: 20px;
     margin-bottom: 0;
-    background-color: #cccccc45; /* Add background color to the navbar */
+    background-color: #cccccc45;
   }
 
   .navbar li a {
@@ -182,63 +160,39 @@ ul.multi-column-list li {
   }
 
   .profile-image {
-    width: 150px; /* Adjust the width as needed */
-    height: 150px; /* Adjust the height as needed */
-    margin: 0 auto; /* Center the image horizontally */
+    margin: 0 auto;
   }
 
   .profile-info {
-    display: flex;
-    flex-direction: column; /* Arrange items in a column */
-    align-items: center; /* Align items horizontally */
-    text-align: center; /* Center text */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  .section {
-    border-bottom-left-radius: 5px;
+
+  .section,
+  .video-section {
     border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
   }
+
   .section-header {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    display: relative;
-  }
-
-  .video-section {
-    display: block; /* Change to block display for stacking vertically */
-    border-radius: 5px;
-    padding: 1em;
-    padding-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
   }
 
   .text-content {
-    padding-right: 0; /* Remove padding between text and video */
-    margin-bottom: 20px; /* Add margin between text and video */
+    padding-right: 0;
+    margin-bottom: 20px;
   }
-  .video-content {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width) */
-    height: 0;
-  }
-  .video-content iframe {
-    position: absolute;
-    border-radius: 5px;
 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  .video-content iframe {
+    border-radius: 5px;
   }
+
   ul.multi-column-list {
-    columns: 2; /* Set the number of columns */
+    columns: 2;
   }
 }
-
-
-
-
-
 
 /* Media query for tablets */
 @media only screen and (min-width: 459px) and (max-width: 1024px) {
@@ -246,31 +200,30 @@ ul.multi-column-list li {
     padding-left: 50px;
     padding-right: 50px;
   }
+
   ul.multi-column-list {
-    columns: 3; /* Set the number of columns */
+    columns: 3;
   }
 }
-
-
-
-
-
 
 /* Media query for wide displays */
 @media only screen and (min-width: 1025px) {
   .navbar li {
-    width: 100%; /* Make each item take up entire width */
+    width: 100%;
   }
+
   .video-section {
-    margin-top: 30px; /* Add margin on top */
-    align-items: flex-start; /* Align items at the start of the cross axis */
+    margin-top: 30px;
+    align-items: flex-start;
   }
+
   .text-content {
-    flex: 1; /* Take up remaining space */
-    padding-right: 20px; /* Adjust spacing between text and video */
+    flex: 1;
+    padding-right: 20px;
   }
+
   .video-content {
-    max-width: 550px; /* Set maximum width for the video */
-    margin: 0 auto; /* Center the video horizontally */
+    max-width: 550px;
+    margin: 0 auto;
   }
 }
