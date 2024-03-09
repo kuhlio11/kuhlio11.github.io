@@ -29,7 +29,7 @@ header {
 .container {
   padding: 5em;
   padding-top: 15px;
-  background-color: #cccccc45;
+  background-color: #cccccc99;
 }
 
 h2,
@@ -152,7 +152,7 @@ ul.multi-column-list {
     justify-content: space-around;
     padding: 1em;
     padding-bottom: 0px;
-    background-color: #cccccc45;
+    background-color: #cccccc99;
   }
 
   .navbar li a {
