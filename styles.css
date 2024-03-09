@@ -28,7 +28,7 @@ header {
 
 .container {
   padding: 5em;
-  padding-top: 30px;
+  padding-top: 15px;
   background-color: #cccccc45;
 }
 
@@ -147,11 +147,11 @@ ul.multi-column-list {
   .navbar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 1rem;
-    column-gap: 1rem;
+    row-gap: 1em;
+    column-gap: 1em;
     justify-content: space-around;
-    padding: 20px;
-    margin-bottom: 0;
+    padding: 1em;
+    padding-bottom: 0px;
     background-color: #cccccc45;
   }
 
@@ -178,6 +178,7 @@ ul.multi-column-list {
   .section-header {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    margin-top: -10px;
   }
 
   .text-content {
